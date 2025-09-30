@@ -1,0 +1,127 @@
+/* ===== RESET & BASE ===== */
+/* Supprime les marges par défaut et définit une base propre */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Inclut padding et border dans la largeur totale */
+}
+
+body {
+  font-family: 'Inter', Arial, sans-serif;
+  background-color: #141414; /* Fond sombre */
+  color: #ffffff;
+  min-height: 100vh; /* Hauteur minimale = hauteur de l'écran */
+  display: flex;
+  flex-direction: column; /* Empile les éléments verticalement */
+  justify-content: center; /* Centre verticalement */
+  align-items: center; /* Centre horizontalement */
+  padding: 20px; /* Espace sur les bords pour mobile */
+}
+
+/* ===== CARTE PROFIL ===== */
+.profile-card {
+  background-color: #1f1f1f; /* Fond légèrement plus clair que le body */
+  border-radius: 12px; /* Coins arrondis */
+  padding: 40px;
+  max-width: 400px; /* Largeur maximale de la carte */
+  width: 100%; /* Prend 100% jusqu'à max-width */
+  text-align: center; /* Centre tout le texte */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Ombre portée */
+}
+
+/* ===== IMAGE DE PROFIL ===== */
+.profile-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%; /* Rend l'image ronde */
+  object-fit: cover; /* Recadre l'image sans déformation */
+  margin-bottom: 24px;
+  /* Bordure gradient (vert/bleu) */
+  border: 3px solid transparent;
+  background: 
+    linear-gradient(#1f1f1f, #1f1f1f) padding-box,
+    linear-gradient(135deg, #c4f82a, #00d4ff) border-box;
+  transition: transform 0.3s ease;
+}
+
+/* ===== TEXTES DU PROFIL ===== */
+.profile-name {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #ffffff;
+}
+
+.profile-location {
+  font-size: 14px;
+  color: #b5e48c; /* Vert/jaune pour mettre en valeur */
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.profile-bio {
+  font-size: 14px;
+  color: #a8a8a8; /* Gris clair pour texte secondaire */
+  margin-bottom: 32px;
+  line-height: 1.5; /* Espace entre les lignes */
+}
+
+/* ===== LIENS SOCIAUX ===== */
+.social-links {
+  display: flex;
+  flex-direction: column; /* Empile les liens verticalement */
+  gap: 16px; /* Espace entre chaque lien */
+}
+
+.social-link {
+  background-color: #333333;
+  color: #ffffff;
+  text-decoration: none; /* Supprime le soulignement */
+  padding: 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.3s ease; /* Animation douce pour les changements */
+  display: block; /* Prend toute la largeur */
+}
+
+/* Effet au survol (hover) */
+.social-link:hover {
+  background-color: #99d98c; /* Change de couleur au survol */
+  color: #1f1f1f; /* Texte sombre sur fond clair */
+  transform: translateY(-2px); /* Léger déplacement vers le haut */
+}
+
+/* Effet au clic */
+.social-link:active {
+  transform: translateY(0); /* Retour à la position normale */
+}
+
+/* ===== FOOTER / ATTRIBUTION ===== */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 30px;
+  color: #666;
+}
+
+.attribution a {
+  color: #b5e48c;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.attribution a:hover {
+  color: #ffffff;
+}
+
+/* ===== RESPONSIVE (Mobile) ===== */
+@media (max-width: 480px) {
+  .profile-card {
+    padding: 30px 24px; /* Réduit le padding sur mobile */
+  }
+  
+  .profile-name {
+    font-size: 22px;
+  }
+}
